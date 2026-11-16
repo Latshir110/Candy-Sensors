@@ -63,25 +63,6 @@ Con la conexión funcionando, el siguiente paso fue controlar algo dentro del ju
 - Plugin [SerialCOM](https://github.com/videofeedback/Unreal_Engine_SerialCOM_Plugin) de Ramiro Montes De Oca (ya incluido en `Plugins/`)
 - Arduino IDE
 
-## Cómo probarlo
-
-1. Sube el sketch que quieras probar al Arduino desde Arduino IDE.
-2. Revisa en qué puerto COM está conectado el Arduino (*Herramientas → Puerto*).
-3. **Cierra el Monitor Serie de Arduino IDE**, porque el puerto solo puede estar abierto en un programa a la vez.
-4. Abre `ConexionArduino.uproject`. Si te pide compilar los módulos, acepta.
-5. En el Blueprint `Content/ThirdPerson/Blueprints/Conexion`, en el nodo `Open Serial Port`, configura el mismo número de puerto (ej. `5` para COM5) y `9600` de baud rate.
-6. Presiona **Play**. En pantalla debería aparecer `true` si el puerto se abrió correctamente.
-7. Presiona el botón físico y la linterna del personaje debería encenderse o apagarse.
-
-### Conexión del botón
-
-| Botón   | Arduino |
-|---------|---------|
-| Pata 1  | Pin 2   |
-| Pata 2  | GND     |
-
-No necesita resistencia externa porque se usa la resistencia interna del Arduino (`INPUT_PULLUP`).
-
 ## Estructura del repositorio
 
 ```
